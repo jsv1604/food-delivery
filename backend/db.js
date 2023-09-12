@@ -4,10 +4,11 @@ const mongoDB = async() =>{
     await mongoose.connect(mongoURI, { useNewUrlParser : true})
     .then(async()=>{
         console.log("MongoDB connected successfully");
-        const fetched_data = await mongoose.connection.db.collection("foodCategory");
+        const fetched_data = await mongoose.connection.db.collection("users");
         fetched_data.find({}).toArray()
         .then((data) =>{
             console.log("Data recieved");
+            // console.log(data);
         })
         .catch((err)=>{
             console.log(err);
