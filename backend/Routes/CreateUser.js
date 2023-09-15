@@ -35,6 +35,7 @@ body('password','Password should have more than 5 characters').isLength({min:5})
 
 
 
+
 router.post("/loginuser",
 [body('email','Not a valid Email').isEmail()],
  async(req,res)=>{
