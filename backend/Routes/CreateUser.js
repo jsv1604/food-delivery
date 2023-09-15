@@ -30,4 +30,6 @@ body('password','Password should have more than 5 characters').isLength({min:5})
     }
 })
 
+
+
 module.exports = router;
